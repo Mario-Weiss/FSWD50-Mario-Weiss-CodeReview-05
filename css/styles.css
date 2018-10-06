@@ -1,3 +1,10 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 body {
   transition: 2s;
   user-select: none; }
@@ -9,6 +16,10 @@ nav {
 
 main {
   color: #CECECE; }
+
+#movies {
+  animation-name: fadeIn;
+  animation-duration: 1s; }
 
 .bg-verydark {
   background-color: #060606; }
@@ -58,8 +69,8 @@ p, span {
   cursor: pointer; }
 
 .likes {
-  height: 6.4vw;
-  width: 6.4vw;
+  height: 7vw;
+  width: 7vw;
   border-radius: 100%; }
 
 @media screen and (min-width: 768px) {
@@ -85,8 +96,8 @@ p, span {
     text-shadow: -0.1vw 0 black, 0 0.1vw black, 0.1vw 0 black, 0 -0.1vw black, 0 0 1vw white, 0 0 2vw white; }
 
   .likes {
-    height: 3.2vw;
-    width: 3.2vw; } }
+    height: 3.5vw;
+    width: 3.5vw; } }
 @media screen and (min-width: 1200px) {
   img {
     height: 13.4vw;
@@ -110,7 +121,7 @@ p, span {
     text-shadow: -0.1vw 0 black, 0 0.1vw black, 0.1vw 0 black, 0 -0.1vw black, 0 0 1vw white, 0 0 2vw white; }
 
   .likes {
-    height: 2.2vw;
-    width: 2.2vw; } }
+    height: 2.35vw;
+    width: 2.35vw; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -8,6 +8,7 @@ var filterClasses = ".";
 $("#movies").html("<div class='text-center text-danger p-5 my-5'><h1>We are sorry, we can't connect to our movie database.<br>If you have a local copy of our page, please visit the online version to view our amazing movie database!</h1></div>");
 //-----request contern from json file (http-request!!! will not wor on local copy)-----//
 $.get("js/movies.json", function(data) {
+  $("#movies").html("");
   fillContent(data.movies);
   movies_arr = data.movies;
 });
@@ -87,9 +88,17 @@ function likeUp() {
 	var tempId = $(this).parent().attr("id")
 	$(movies_arr).each(function(i) {
 		if (tempId == movies_arr[i].img.split('.').slice(0, -1).join('.')) {
-			movies_arr[i].likes++;
-			tempId = "#"+tempId+" div h4";
-			$(tempId).text(movies_arr[i].likes);	
+			if (movies_arr[i].likes == 999) {
+				swal("Sorry!","Your movie cannot have more than 999 Likes!","error");
+			} else {
+				movies_arr[i].likes++;
+				tempId = "#"+tempId+" div h4";
+				$(tempId).text(movies_arr[i].likes);
+				if (movies_arr[i].likes == 999) {
+					swal("Congratulation!","Your movie reached now 999 Likes!","success");
+				}
+			}
+				
 		}
 	})	
 }
