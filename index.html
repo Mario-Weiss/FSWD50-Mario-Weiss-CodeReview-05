@@ -6,7 +6,6 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	
 	<title>Movie Factory</title>
 </head>
 <body class="text-white">
@@ -27,12 +26,20 @@
 				</div>
 				<div class="col-4 text-right">
 					<div class="dropdown">
-						<span class="dropdown-toggle sort" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						</span><span class="sort"> Sort</span>
+						<span class="sort" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-caret-down"></i> Sort
+						</span>
 						<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-							<button class="dropdown-item" type="button">Name</button>
-							<button class="dropdown-item" type="button">Year</button>
-							<button class="dropdown-item" type="button">Popularity</button>
+							<button class="dropdown-item" type="button" id="sort_name">Name</button>
+							<button class="dropdown-item" type="button" id="sort_desc_name">Name (desc)</button>
+							<hr>
+							<button class="dropdown-item" type="button" id="sort_overview">Overview</button>
+							<button class="dropdown-item" type="button" id="sort_desc_overview">Overview (desc)</button>
+							<hr>
+							<button class="dropdown-item" type="button" id="sort_desc_year">Year</button>
+							<button class="dropdown-item" type="button" id="sort_year">Year (asc)</button>
+							<hr>
+							<button class="dropdown-item" type="button" id="sort_desc_likes">Likes</button>
+							<button class="dropdown-item" type="button" id="sort_likes">Likes (asc)</button>
 					  </div>
 					</div>
 				</div>	
