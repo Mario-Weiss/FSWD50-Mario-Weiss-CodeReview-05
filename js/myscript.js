@@ -55,7 +55,6 @@ function fillcontent(movies) {
 	$(genre_arr).each(function(i, value){
 		$("#filter_"+value).click(function(){filter(value)});
 	});
-	console.log(genre_arr);
 }
 
 function likeUp() {
