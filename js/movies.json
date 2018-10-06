@@ -1,0 +1,88 @@
+{
+	"movies": [
+		{
+			"name" : "Ant-Man and the Wasp",
+			"year" : "2018",
+			"overview" : "Just when his time under house arrest is about to end, Scott Lang puts again his freedom at risk to help Hope van Dyne and Dr. Hank Pym dive into the quantum realm and try to accomplish, against time and any chance of success.",
+			"img" : "antman.jpg",
+			"likes" : "0"
+		},
+		{
+			"name" : "Incredibles 2",
+			"year" : "2018",
+			"overview" : "Elastigirl springs into action to save the day, while Mr. Incredible faces his greatest challenge yet – taking care of the problems of his three children.",
+			"img" : "incredibles2.jpg",
+			"likes" : "0"
+		},
+		{
+			"name" : "The Boss Baby: Back in Business",
+			"year" : "2018",
+			"overview" : "With a little help from his brother and accomplice, Tim, Boss Baby tries to balance family life with his job at Baby Corp headquarters.",
+			"img" : "bossbaby.jpg",
+			"likes" : "0"
+		},
+		{
+			"name" : "Jurassic World",
+			"year" : "2015",
+			"overview" : "Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond.",
+			"img" : "jurassicworld.jpg",
+			"likes" : "0"
+		},
+		{
+			"name" : "Star Wars: The Last Jedi",
+			"year" : "2017",
+			"overview" : "Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order.",
+			"img" : "lastjedi.jpg",
+			"likes" : "0"
+		},
+		{
+			"name" : "Hotel Transylvania",
+			"year" : "2012",
+			"overview" : "Welcome to Hotel Transylvania, Dracula's lavish five-stake resort, where monsters and their families can live it up and no humans are allowed. One special weekend, Dracula has invited all his best friends to celebrate his beloved daughter Mavis's 118th birthday.",
+			"img" : "hoteltransilvania.jpg",
+			"likes" : "0"
+		},
+		{
+			"name" : "Antboy",
+			"year" : "2013",
+			"overview" : "12-year-old Pelle accidentally gets bitten by an ant and develops unimaginable superpowers. With help from his friend, comic book nerd Wilhelm, Pelle creates a secret identity as the superhero Antboy.",
+			"img" : "antboy.jpg",
+			"likes" : "0"
+		},
+		{
+			"name" : "Despicable Me",
+			"year" : "2010",
+			"overview" : "Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill, a super-villain who, alongside her inventor husband Herb, hatches a plot to take over the world.",
+			"img" : "minions.jpg",
+			"likes" : "0"
+		},
+		{
+			"name" : "Minions",
+			"year" : "2015",
+			"overview" : "Villainous Gru lives up to his reputation as a despicable, deplorable and downright unlikable guy when he hatches a plan to steal the moon from the sky. But he has a tough time staying on task after three orphans land in his care.",
+			"img" : "despicableme.jpg",
+			"likes" : "0"
+		},
+		{
+			"name" : "Werner - Beinhart!",
+			"year" : "1990",
+			"overview" : "Comic artist Brösel trades a magic pen that helps him come up with funny stories for the promise to fulfill one of Rumpelstiltskin's wishes. The resulting animated films show episodes of the life of Werner.",
+			"img" : "werner.jpg",
+			"likes" : "0"
+		},
+		{
+			"name" : "The Fifth Element",
+			"year" : "1997",
+			"overview" : "In 2257, a taxi driver is unintentionally given the task of saving a young girl who is part of the key that will ensure the survival of humanity.",
+			"img" : "5element.jpg",
+			"likes" : "0"
+		},
+		{
+			"name" : "Star Trek ",
+			"year" : "2009",
+			"overview" : "The fate of the galaxy rests in the hands of bitter rivals. One, James Kirk, is a delinquent, thrill-seeking Iowa farm boy. The other, Spock, a Vulcan, was raised in a logic-based society that rejects all emotion.The human adventure has begun again.",
+			"img" : "startrek.jpg",
+			"likes" : "0"
+		}
+	]
+}
