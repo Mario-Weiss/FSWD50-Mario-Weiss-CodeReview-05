@@ -1,9 +1,12 @@
+//-----prepare global vars we going to use-----//
 var movies_arr = [];
 var genre_arr = [];
 var sort_arr = ["name", "year","likes"];
 var filter = "show_all";
 var filterClasses = ".";
 
+$("#movies").html("<div class='text-center text-danger p-5 my-5'><h1>We are sorry, we can't connect to our movie database.<br>If you have a local copy of our page, please visit the online version to view our amazing movie database!</h1></div>");
+//-----request contern from json file (http-request!!! will not wor on local copy)-----//
 $.get("js/movies.json", function(data) {
   fillContent(data.movies);
   movies_arr = data.movies;
