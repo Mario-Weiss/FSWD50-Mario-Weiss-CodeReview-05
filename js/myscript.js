@@ -1,5 +1,7 @@
-var movies_arr
-var sort_arr = ["name","overview","year","likes"];
+var movies_arr = [];
+var genre_arr = [];
+var sort_arr = ["name", "year","likes"];
+var filter;
 
 $.get("js/movies.json", function(data) {
   fillcontent(data.movies);
@@ -15,7 +17,9 @@ function fillcontent(movies) {
 //-----create content of page-----//
 	var content = ""
 	$(movies).each(function(i) {
-		content += "<div class='col-12 col-md-6 col-lg-6 col-xl-4 py-2'>";
+//-----handover the genre as class to the container, so we can filter it later on-----//
+		var genre_div = (movies[i].genre).join(" ");
+		content += "<div class='col-12 col-md-6 col-lg-6 col-xl-4 py-2 "+genre_div+"'>";
 		content += "		<div class='test bg-verydark p-2 d-flex rounded'>";
 		content += "			<img class='rounded' src='img/"+movies[i].img+"' alt='"+movies[i].name+"'>";
 		content += "			<div class='d-flex flex-column px-3'>";
@@ -30,10 +34,28 @@ function fillcontent(movies) {
 		content += "		</div>";
 		content += "	</div>";	
 	});
-
+//-----fill up page with content-----//
 	$("#movies").html(content);
 //-----add EventHandler to the "Like Button"-----//
 	$(".like").click(likeUp);
+//-----fill genre_arr with all genre from database/json-----//
+	$(movies).each(function(i) {
+		$(movies[i].genre).each(function(j, value){
+			if($.inArray(value, genre_arr) === -1) genre_arr.push(value);
+		});
+	});
+	genre_arr.sort();
+	genre_arr.unshift("show_all");
+//-----add values für filtering-----//
+	var filterContent = ""
+	$(genre_arr).each(function(i, value){
+		filterContent += "<button id='filter_"+value+"' class='dropdown-item'>"+value.replace('_',' ')+"</button>"
+	})
+	$("#genre_filter").html(filterContent);
+	$(genre_arr).each(function(i, value){
+		$("#filter_"+value).click(function(){filter(value)});
+	});
+	console.log(genre_arr);
 }
 
 function likeUp() {
@@ -44,7 +66,8 @@ function likeUp() {
 			tempId = "#"+tempId+" div h4";
 			$(tempId).text(movies_arr[i].likes);	
 		}
-	})	
+	})
+	console.log(genre_arr)	
 }
 
 function sortString(field, order) {
@@ -71,6 +94,19 @@ function sortString(field, order) {
 		});
 	}
 	fillcontent(movies_arr);
+}
+
+function filter(genre){
+	if (genre == "show_all") {
+		$(genre_arr).each(function(i, value){
+			$("."+value).show(500);
+		})
+	} else {
+		$(genre_arr).each(function(i, value){
+			$("."+value).hide(500);
+		})
+		$("."+genre).show(500);
+	}
 }
 
 /* deprecated version but working!
