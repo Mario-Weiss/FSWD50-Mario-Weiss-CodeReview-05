@@ -8,7 +8,9 @@
 		opacity: 1
 
 body
-	transition: 2s
+	//transition: 2s
+	//padding-right: 0 !important  //fix for sweetalert2
+	//overflow: auto !important    //fix for sweetalert2
 	user-select: none
 nav
 	color: #CECECE
@@ -30,11 +32,69 @@ main
 .test
 	width: 100%
 	background-color: #111
+.infobox
+	width: 100%
+	height: 100%
+.info:hover
+	color: yellow
+#overlay
+	display: none
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: rgba(0,0,0,0.9)
+	z-index: 3
+#infobox
+	display: none
+	position: fixed
+	width: 95vw 
+	height: 45vw
+	max-height: 99vh
+	left: 50%
+	top: 50%
+	transform: translate(-50%,-50%)
+	background: rgba(0,0,0,.95)
+	z-index: 5
+	box-shadow: 0 0 .5vw 0 white
+	color: #CECECE
+	img
+		height: 100%
+	iframe
+		width: 57vw
+		height: 25vw
+	p
+		font-size: 1.4vw
+	small
+		font-size: 1.2vw
+	h4
+		font-size: 2.5vw
+		margin-bottom: 1vw
+	h5
+		font-size: 1.8vw
+		margin-bottom: 1vw
+	h6
+		font-size: 1.5vw
+	#profile
+		a
+			color: #CECECE
+			&:hover
+				color: #CECECE
+	li.active
+		background-color: #CECECE
+	.overflow
+		overflow: auto
+		overflow-x: hidden	
+#closeInfobox
+	cursor: pointer
 img
 	height:  40vw
 	box-shadow: 0 0 .5vw 0 white
 h4
-	font-size: 4vw
+	font-size: 3.5vw
 	margin: 0
 h5
 	font-size: 3vw
@@ -43,6 +103,8 @@ h6
 	font-size: 2.6vw
 p, span
 	font-size: 2.6vw
+.lead
+	font-size: 1.5vw
 .sort, .filter
 	font-size: 22px
 	color: #CECECE
@@ -61,12 +123,27 @@ p, span
 	width: 7vw
 	border-radius: 100%
 
+.nav-link
+	padding: .1vw 1vw !important
+	font-size: 1.5vw !important
+	color: #CECECE
+	&:hover
+		color: #CECECE
+.nav-tabs
+	min-height: 2.65vw
+	height: 2.65vw
+	border-bottom: .1vw solid #dee2e6
+
+.fas:hover
+	transform: scale(1.2)
+	transition: .5s
+
 @media screen  and (min-width: 768px)
 	img
 		height:  20vw
 		box-shadow: 0 0 .5vw 0 white
 	h4
-		font-size: 2vw
+		font-size: 1.75vw
 		margin: 0
 	h5
 		font-size: 1.5vw
@@ -86,7 +163,7 @@ p, span
 		height:  13.4vw
 		box-shadow: 0 0 .34vw 0 white
 	h4
-		font-size: 1.34vw
+		font-size: 1.2vw
 		margin: 0
 	h5
 		font-size: 1vw
@@ -100,3 +177,4 @@ p, span
 	.likes
 		height: 2.35vw
 		width: 2.35vw
+	
